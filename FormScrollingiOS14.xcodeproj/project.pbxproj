@@ -14,6 +14,10 @@
 		62F165E025360DF400AFDF3B /* FormScrollingiOS14UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F165DF25360DF400AFDF3B /* FormScrollingiOS14UITests.swift */; };
 		62F165F92536124C00AFDF3B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F165F82536124C00AFDF3B /* MainViewController.swift */; };
 		62F1660D25364A8000AFDF3B /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F1660C25364A8000AFDF3B /* UITextField+Extensions.swift */; };
+		8DB6BAFF25AAB029008118FA /* DoubleViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6BAFE25AAB029008118FA /* DoubleViewBuilder.swift */; };
+		8DB6BB0725AABA82008118FA /* BottomSheetContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6BB0625AABA82008118FA /* BottomSheetContainerViewController.swift */; };
+		8DB6BB0C25AACE7A008118FA /* DoubleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6BB0B25AACE7A008118FA /* DoubleViewController.swift */; };
+		8DB6BB2825AC09AE008118FA /* XCTest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6BB2725AC09AE008118FA /* XCTest+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		62F165E125360DF400AFDF3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62F165F82536124C00AFDF3B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		62F1660C25364A8000AFDF3B /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		8DB6BAFE25AAB029008118FA /* DoubleViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleViewBuilder.swift; sourceTree = "<group>"; };
+		8DB6BB0625AABA82008118FA /* BottomSheetContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetContainerViewController.swift; sourceTree = "<group>"; };
+		8DB6BB0B25AACE7A008118FA /* DoubleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleViewController.swift; sourceTree = "<group>"; };
+		8DB6BB2725AC09AE008118FA /* XCTest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +107,11 @@
 			children = (
 				62F165BD25360DF300AFDF3B /* AppDelegate.swift */,
 				62F165C625360DF300AFDF3B /* Assets.xcassets */,
+				8DB6BB3225AE6DDD008118FA /* DoubleView */,
+				8DB6BB1625AACE88008118FA /* Extensions */,
 				62F165CB25360DF300AFDF3B /* Info.plist */,
 				62F165C825360DF300AFDF3B /* LaunchScreen.storyboard */,
 				62F165F82536124C00AFDF3B /* MainViewController.swift */,
-				62F1660C25364A8000AFDF3B /* UITextField+Extensions.swift */,
 			);
 			path = FormScrollingiOS14;
 			sourceTree = "<group>";
@@ -110,6 +119,7 @@
 		62F165D325360DF400AFDF3B /* FormScrollingiOS14Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8DB6BB2625AC0975008118FA /* Extensions */,
 				62F165D425360DF400AFDF3B /* FormScrollingiOS14Tests.swift */,
 				62F165D625360DF400AFDF3B /* Info.plist */,
 			);
@@ -123,6 +133,32 @@
 				62F165E125360DF400AFDF3B /* Info.plist */,
 			);
 			path = FormScrollingiOS14UITests;
+			sourceTree = "<group>";
+		};
+		8DB6BB1625AACE88008118FA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				62F1660C25364A8000AFDF3B /* UITextField+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8DB6BB2625AC0975008118FA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8DB6BB2725AC09AE008118FA /* XCTest+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8DB6BB3225AE6DDD008118FA /* DoubleView */ = {
+			isa = PBXGroup;
+			children = (
+				8DB6BB0B25AACE7A008118FA /* DoubleViewController.swift */,
+				8DB6BB0625AABA82008118FA /* BottomSheetContainerViewController.swift */,
+				8DB6BAFE25AAB029008118FA /* DoubleViewBuilder.swift */,
+			);
+			path = DoubleView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB6BB0725AABA82008118FA /* BottomSheetContainerViewController.swift in Sources */,
+				8DB6BB0C25AACE7A008118FA /* DoubleViewController.swift in Sources */,
 				62F1660D25364A8000AFDF3B /* UITextField+Extensions.swift in Sources */,
 				62F165BE25360DF300AFDF3B /* AppDelegate.swift in Sources */,
+				8DB6BAFF25AAB029008118FA /* DoubleViewBuilder.swift in Sources */,
 				62F165F92536124C00AFDF3B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB6BB2825AC09AE008118FA /* XCTest+Extensions.swift in Sources */,
 				62F165D525360DF400AFDF3B /* FormScrollingiOS14Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

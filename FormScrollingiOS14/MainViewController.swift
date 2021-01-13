@@ -14,16 +14,18 @@ class MainViewController: UIViewController {
     
     private var tasks = Set<AnyCancellable>()
     private var activeTextField: UITextField?
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
-        listenForKeyboardEvents()
-        scrollView.delegate = self
-    }
+    private var builder: DoubleViewBuilder
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    init(builder: DoubleViewBuilder) {
+        self.builder = builder
+        super.init(nibName: nil, bundle: nil)
+        
+        listenForKeyboardEvents()
+        scrollView.delegate = self
     }
     
     override func viewDidLoad() {
@@ -147,6 +149,8 @@ class MainViewController: UIViewController {
     @objc
     private func onSave(_ sender: Any) {
         print("onSave")
+        let viewController = builder.make(alertType: .hello, presentingViewController: self)
+        present(viewController, animated: true)
     }
     
     private func createTextField(placeholder: String) -> UITextField {
@@ -247,3 +251,19 @@ private extension MainViewController {
         }
     }
 }
+
+#if DEBUG
+extension MainViewController {
+    struct DebugPanel {
+        let sut: MainViewController
+        
+        func tapOnSave() {
+            sut.onSave(self)
+        }
+    }
+    
+    var debugPanel: DebugPanel {
+        .init(sut: self)
+    }
+}
+#endif
